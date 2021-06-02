@@ -7,12 +7,67 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="base">
-        <div class="container">
-            <div class="left_box">
-                <img src="../src/assets/img1.png" alt="">
+    <div class="main">
+        <div class="content">
+            <div class="overlay"></div>
+            <div class="pop_up pop_up_success">
+                <p>
+                    Inscription réussi ! Vous pouvez maintenant vous connecter.
+                </p>
+                <button class="valide">Compris</button>
             </div>
-            <div class="right_box"></div>
+            <div class="box_left">
+                <div class="message_connexion">
+                    <p>
+                        Déjà inscrit ?, <span class="connexion">connectez-vous</span>
+                    </p>
+                </div>
+                <div class="message_inscription">
+                    <p>
+                        Pas encore inscrit ?, <span class="inscription">inscrivez-vous</span>
+                    </p>
+                </div>
+            </div>
+            <div class="box_right">
+                <div class="sign_in form">
+                    <form action="">
+                        <label for="name">
+                            <input type="text" name="name" id="" placeholder="Nom" autocomplete="off">
+                        </label>
+                        <label for="name">
+                            <input type="text" name="email" id="" placeholder="Email" autocomplete="off">
+                        </label>
+                        <label for="name">
+                            <input type="text" name="birth" id="" placeholder="Date de naissance" autocomplete="off">
+                        </label>
+                        <label for="name">
+                            <input type="text" name="telephone" id="" placeholder="Numéro de téléphone" autocomplete="off">
+                        </label>
+                        <label for="name">
+                            <input type="text" name="password" id="" placeholder="Mot de passe" autocomplete="off">
+                        </label>
+                        <label for="name">
+                            <input type="text" name="password_" id="" placeholder="Confirmer mot de passe" autocomplete="off">
+                        </label>
+                        <button class="inscrire">
+                            S'inscrire
+                        </button>
+                    </form>
+                </div>
+                <div class="log_in form">
+                    <form action="">
+                        <label for="email">
+                            <input type="text" name="email" id="" placeholder="Email" autocomplete="off">
+                        </label>
+                        <label for="password">
+                            <input type="text" name="password" id="" placeholder="Mot de passe" autocomplete="off">
+                        </label>
+                        <button class="connecter">
+                            Se connecter
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </body>
