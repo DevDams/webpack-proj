@@ -1,3 +1,5 @@
+import { nom, email, birth, tel, mdp, mdp_ } from '../sign/index.js'
+
 const inscription = document.querySelector('.inscription')
 const connexion = document.querySelector('.connexion')
 const message_inscription = document.querySelector('.message_inscription')
@@ -10,15 +12,6 @@ const overlay = document.querySelector('.overlay')
 const pop_up_success = document.querySelector('.pop_up_success')
 const pop_up_failure = document.querySelector('.pop_up_failure')
 const inscrire = document.querySelector('.inscrire')
-const connecter = document.querySelector('.connecter')
-
-// Singin variables
-const nom = document.querySelector('#name')
-const email = document.querySelector('#email')
-const birth = document.querySelector('#birth')
-const tel = document.querySelector('#tel')
-const mdp = document.querySelector('#mdp')
-const mdp_ = document.querySelector('#mdp_')
 
 // Send to the connexion page
 inscription.addEventListener('click', () => {

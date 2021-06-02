@@ -40,3 +40,5 @@ inscrire.addEventListener('click', () => {
     
 })
 
+export { nom, email, birth, tel, mdp, mdp_ }
+

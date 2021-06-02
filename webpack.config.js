@@ -4,17 +4,18 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports =  {
     mode: "development",
+    watch: true,
     entry: "./src/index.js",
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, "dist")
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Caching',
             template: './src/template.html'
-        })
+        }),
+        new CleanWebpackPlugin()
     ],
     module: {
         rules: [
@@ -28,7 +29,10 @@ module.exports =  {
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
-                type: "asset/resource"
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
             },
         ]
     }
