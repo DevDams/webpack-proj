@@ -11,19 +11,25 @@ const pop_up_failure = document.querySelector('.pop_up_failure')
 // Get users from local storage
 const users = JSON.parse(localStorage.getItem('users'))
 
+
 connecter.addEventListener('click', (e) => {
     e.preventDefault()
-    for (let i = 0; i < users.length; i++) {
-        if (connexion_password.value !== users[i].userMdp) {
-            overlay.style.display = "block"
-            pop_up_success.style.display = "none"
-            pop_up_failure.style.display = "flex"
-        } else if (connexion_email.value !== users[i].userEmail) {
-            overlay.style.display = "block"
-            pop_up_success.style.display = "none"
-            pop_up_failure.style.display = "flex"
-        } else {
-            success.style.display = "flex"
+    if (users === null) {
+        overlay.style.display = "block"
+        pop_up_failure.style.display = "flex"
+    } else {
+        for (let i = 0; i < users.length; i++) {
+            if (connexion_password.value !== users[i].userMdp) {
+                overlay.style.display = "block"
+                pop_up_success.style.display = "none"
+                pop_up_failure.style.display = "flex"
+            } else if (connexion_email.value !== users[i].userEmail) {
+                overlay.style.display = "block"
+                pop_up_success.style.display = "none"
+                pop_up_failure.style.display = "flex"
+            } else {
+                success.style.display = "flex"
+            }
         }
     }
 })
