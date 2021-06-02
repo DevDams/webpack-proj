@@ -1,5 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require("path")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports =  {
     mode: "development",
@@ -8,10 +9,13 @@ module.exports =  {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, "dist")
     },
-    plugins: [new HtmlWebpackPlugin({
-        title: 'Caching',
-        template: './src/template.html'
-    })],
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'Caching',
+            template: './src/template.html'
+        })
+    ],
     module: {
         rules: [
             {
